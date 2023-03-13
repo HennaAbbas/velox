@@ -213,6 +213,7 @@ jobs:
           # are cached, and has no other meaning.
           # If you update it, be sure to update save_cache too.
           key: velox-circleci-macos-{{ arch }}-deps-v1-{{ checksum ".circleci/config.yml" }}-{{ checksum "scripts/setup-macos.sh" }}
+      - run: brew developer off          
       - run:
           name: "Install dependencies"
           command: |
