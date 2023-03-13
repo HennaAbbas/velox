@@ -201,6 +201,10 @@ jobs:
       ICU_SOURCE: BUNDLED
     steps:
       - checkout
+      - run:
+          command: |
+            brew update --auto-update
+            brew install ninja      
       - update-submodules
       - restore_cache:
           name: "Restore Dependency Cache"
