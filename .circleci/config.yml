@@ -202,13 +202,13 @@ jobs:
     steps:
       - checkout
       - update-submodules
-      - restore_cache:
-          name: "Restore Dependency Cache"
-          # The version number in the key can be incremented
-          # to manually avoid the case where bad dependencies
-          # are cached, and has no other meaning.
-          # If you update it, be sure to update save_cache too.
-          key: velox-circleci-macos-{{ arch }}-deps-v1-{{ checksum ".circleci/config.yml" }}-{{ checksum "scripts/setup-macos.sh" }}
+#       - restore_cache:
+#           name: "Restore Dependency Cache"
+#           # The version number in the key can be incremented
+#           # to manually avoid the case where bad dependencies
+#           # are cached, and has no other meaning.
+#           # If you update it, be sure to update save_cache too.
+#           key: velox-circleci-macos-{{ arch }}-deps-v1-{{ checksum ".circleci/config.yml" }}-{{ checksum "scripts/setup-macos.sh" }}
       - run:
           name: "Install dependencies"
           command: |
