@@ -201,7 +201,7 @@ jobs:
       ICU_SOURCE: BUNDLED
     steps:
       - checkout
-      - update-submodules
+#       - update-submodules
 #       - restore_cache:
 #           name: "Restore Dependency Cache"
 #           # The version number in the key can be incremented
